@@ -69,7 +69,7 @@ namespace nursing_api.Utilities
                     emailClient.Authenticate(_sender, _password);
 
                     List<EmailMessage> emails = new List<EmailMessage>();
-                    for (int i = emailClient.Count - 1; i > (emailClient.Count - 5); i--)
+                    for (int i = emailClient.Count - 1; i >= 0; i--)
                     {
                         var message = emailClient.GetMessage(i);
                         var emailMessage = new EmailMessage
